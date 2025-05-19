@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <title>分類連結頁面</title>
+</head>
+
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px;">
+    <h1 style="font-size: 24px; margin-bottom: 30px;">分類連結總覽</h1>
+    <button onclick="clearCheckboxes()" style="margin-bottom: 20px; padding: 8px 12px; font-size: 14px;">清除所有勾選</button>
+    <h2 onclick="toggleSection(this)" style="background-color: #333; color: #fff; padding: 10px; margin-top: 40px; border-radius: 5px; cursor: pointer; cursor: pointer;">
+        基本 ▾
+    </h2>
+    <div class="category-content">
+        <div style="寵物主頁">
+            <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                <img alt="寵物主頁" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                <div class="link-info" style="display: flex; flex-direction: column;">
+                    <a href="https://www.neopets.com/quickref.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">寵物主頁</a>
+                </div>
+            </div>
+        </div>
+        <div style="股票">
+            <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                <img alt="股票" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                <div class="link-info" style="display: flex; flex-direction: column;">
+                    <a href="https://www.neopets.com/stockmarket.phtml?type=portfolio" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">股票</a>
+                </div>
+            </div>
+        </div>
+        <div style="競技場">
+            <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                <img alt="競技場" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                <div class="link-info" style="display: flex; flex-direction: column;">
+                    <a href="https://www.neopets.com/dome/fight.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">競技場</a>
+                </div>
+            </div>
+        </div>
+        <div style="商店魔法師">
+            <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                <img alt="商店魔法師" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                <div class="link-info" style="display: flex; flex-direction: column;">
+                    <a href="https://www.neopets.com/shops/wizard.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">商店魔法師</a>
+                </div>
+            </div>
+        </div>
+        <div style="保險櫃">
+            <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                <img alt="保險櫃" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                <div class="link-info" style="display: flex; flex-direction: column;">
+                    <a href="https://www.neopets.com/safetydeposit.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">保險櫃</a>
+                </div>
+            </div>
+        </div>
+        <div style="快捷整理">
+            <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                <img alt="快捷整理" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                <div class="link-info" style="display: flex; flex-direction: column;">
+                    <a href="https://www.neopets.com/quickstock.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">快捷整理</a>
+                </div>
+            </div>
+        </div>
+        <div style="濃湯精靈">
+            <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                <img alt="濃湯精靈" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                <div class="link-info" style="display: flex; flex-direction: column;">
+                    <a href="https://www.neopets.com/soupkitchen.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">濃湯精靈</a>
+                </div>
+            </div>
+        </div>
+		
+        <!--	   
+ 
+	<div style="範例">
+		<div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+		  <img src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" alt="範例" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;">
+		  <div class="link-info" style="display: flex; flex-direction: column;">
+			<a href="XXX" target="_blank" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;">範例</a>
+		  </div>
+		</div>
+	</div>
+	
+-->
+    </div>
+
+    <div class="category" style="margin-bottom: 30px;">
+        <h2 onclick="toggleSection(this)" style="background-color: #333; color: #fff; padding: 10px; margin-top: 40px; border-radius: 5px; cursor: pointer;">好康 ▾</h2>
+        <div class="category-content">
+            <div style="治癒泉">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="治癒泉" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/faerieland/springs.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">治癒泉</a>
+                    </div>
+                </div>
+            </div>
+            <div style="水果機">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="水果機" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/desert/fruit/index.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">水果機</a>
+                    </div>
+                </div>
+            </div>
+            <div style="煎蛋捲">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="煎蛋捲" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/prehistoric/omelette.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">煎蛋捲</a>
+                    </div>
+                </div>
+            </div>
+            <div style="巨大果凍">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="巨大果凍" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/jelly/jelly.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">巨大果凍</a>
+                    </div>
+                </div>
+            </div>
+            <div style="湯博拉">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="湯博拉" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/island/tombola.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">湯博拉</a>
+                    </div>
+                </div>
+            </div>
+            <div style="科讚神龕">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="科讚神龕" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/desert/shrine.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">科讚神龕</a>
+                    </div>
+                </div>
+            </div>
+            <div style="商店回饋">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="Rich Slorg商店回饋" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/shop_of_offers.phtml?slorg_payout=yes" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">Rich Slorg商店回饋</a>
+                    </div>
+                </div>
+            </div>
+            <div style="每日驚喜">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="每日驚喜" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/trudys_surprise.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">每日驚喜</a>
+                    </div>
+                </div>
+            </div>
+            <div style="被遺忘的海灘">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="被遺忘的海灘" src="http://images.neopets.com/neoboards/avatars/forgshore.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/pirates/forgottenshore.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">被遺忘的海灘</a>
+                    </div>
+                </div>
+            </div>
+            <div style="聖甲蟲">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="聖甲蟲" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://ncmall.neopets.com/mall/shop.phtml?page=giveaway" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">聖甲蟲</a>
+                    </div>
+                </div>
+            </div>
+            <div style="宇宙滾豆">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="宇宙滾豆" src="http://images.neopets.com/neoboards/avatars/tdmbgpop.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/faerieland/tdmbgpop.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">宇宙滾豆</a>
+                    </div>
+                </div>
+            </div>
+            <div style="靈墓廢墟">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="靈墓廢墟" src="http://images.neopets.com/neoboards/avatars/geraptiku_tomb.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/worlds/geraptiku/tomb.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">靈墓廢墟</a>
+                    </div>
+                </div>
+            </div>
+            <div style="科硫墩流星">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="科硫墩流星" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/moon/meteor.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">科硫墩流星</a>
+                    </div>
+                </div>
+            </div>
+            <div style="釣魚">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="釣魚" src="http://images.neopets.com/neoboards/avatars/fishsquid.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/water/fishing.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">釣魚</a>
+                    </div>
+                </div>
+            </div>
+            <div style="阿塔都議事廳">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="阿塔都議事廳" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/altador/council.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">阿塔都議事廳</a>
+                    </div>
+                </div>
+            </div>
+            <div style="固定錨管理">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="固定錨管理" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/pirates/anchormanagement.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">固定錨管理</a>
+                    </div>
+                </div>
+            </div>
+            <div style="月亮神殿">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="月亮神殿" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.jellyneo.net/?go=lunartemple#calculation" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">月亮神殿</a>
+                        <a href="https://www.jellyneo.net/?go=lunartemple#calculation" style="font-size: 16px; font-weight: bold; color: #888888; text-decoration: none; margin-bottom: 5px;" target="_blank">攻略</a>
+                    </div>
+                </div>
+            </div>
+            <div style="黑曜石採石場">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="黑曜石採石場" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/magma/quarry.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">黑曜石採石場</a>
+                    </div>
+                </div>
+            </div>
+            <div style="地瓜鼠洞">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="地瓜鼠洞" src="http://images.neopets.com/neoboards/avatars/symol.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/symolhole.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">地瓜鼠洞</a>
+                    </div>
+                </div>
+            </div>
+            <div style="猜葫蘆">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="猜葫蘆" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/guessmarrow.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">猜葫蘆</a>
+                    </div>
+                </div>
+            </div>
+            <div style="蘋果咬咬">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="蘋果咬咬" src="http://images.neopets.com/neoboards/avatars/imposterapple.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/halloween/applebobbing.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">蘋果咬咬</a>
+                    </div>
+                </div>
+            </div>
+            <div style="智慧國王">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="智慧國王" src="http://images.neopets.com/neoboards/avatars/kinghagan.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/wiseking.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">智慧國王</a>
+                    </div>
+                </div>
+            </div>
+            <div style="暴躁國王">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="暴躁國王" src="http://images.neopets.com/neoboards/avatars/moodyskarl.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/grumpyking.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">暴躁國王</a>
+                    </div>
+                </div>
+            </div>
+            <div style="每日謎題">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="每日謎題" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/community/index.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">每日謎題</a><a href="https://www.jellyneo.net/?go=dailypuzzle" style="font-size: 16px; font-weight: bold; color: #888888; text-decoration: none; margin-bottom: 5px;" target="_blank">攻略</a>
+                    </div>
+                </div>
+            </div>
+            <div style="新奇蛋洞穴">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="新奇蛋洞穴" src="http://images.neopets.com/neoboards/avatars/nfy14.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/shenkuu/neggcave/" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">新奇蛋洞穴</a><a href="https://thedailyneopets.com/articles/negg-solver" style="font-size: 16px; font-weight: bold; color: #888888; text-decoration: none; margin-bottom: 5px;" target="_blank">攻略</a>
+                    </div>
+                </div>
+            </div>
+            <div style="滾起司">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="滾起司" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/cheeseroller.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">滾起司</a><a href="https://www.jellyneo.net/?go=cheeseroller" style="font-size: 16px; font-weight: bold; color: #888888; text-decoration: none; margin-bottom: 5px;" target="_blank">攻略</a>
+                    </div>
+                </div>
+            </div>
+			<div style="特馬庫拉斯">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="特馬庫拉斯" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/turmaculus.phtml?" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">特馬庫拉斯</a>
+                    </div>
+                </div>
+            </div>
+            <div style="搖錢樹">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="搖錢樹" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/donations.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">搖錢樹</a>
+                    </div>
+                </div>
+            </div>
+            <div style="垃圾山">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="垃圾山" src="http://images.neopets.com/neoboards/avatars/rubbish.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/rubbishdump.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">垃圾山</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <div class="category" style="margin-bottom: 30px;">
+        <h2 onclick="toggleSection(this)" style="background-color: #333; color: #fff; padding: 10px; margin-top: 40px; border-radius: 5px; cursor: pointer;">有償抽獎 ▾</h2>
+        <div class="category-content">
+            <div style="精靈轉盤">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="精靈轉盤" src="http://images.neopets.com/neoboards/avatars/wheelofexcitement.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/faerieland/wheel.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">精靈轉盤</a>
+                    </div>
+                </div>
+            </div>
+            <div style="凡世之輪">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="凡世之輪" src="http://images.neopets.com/neoboards/avatars/mediocrity.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/prehistoric/mediocrity.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">凡世之輪</a>
+                    </div>
+                </div>
+            </div>
+            <div style="學問之輪">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="學問之輪" src="http://images.neopets.com/neoboards/avatars/brightvale.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/knowledge.phtml#goog_rewarded" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">學問之輪</a>
+                    </div>
+                </div>
+            </div>
+            <div style="達龍幣抽籤">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="藏寶圖" src="http://images.neopets.com/neoboards/avatars/aishascalawag.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/pirates/buriedtreasure/index.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">藏寶圖</a>
+                    </div>
+                </div>
+            </div>
+            <div style="精靈洞穴">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="精靈洞穴" src="http://images.neopets.com/neoboards/avatars/toothfaerie.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/faerieland/caverns/index.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">精靈洞穴</a>
+                    </div>
+                </div>
+            </div>
+            <div style="無聊之輪">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="無聊之輪" src="http://images.neopets.com/neoboards/avatars/monotony.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/prehistoric/monotony/monotony.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">無聊之輪</a>
+                    </div>
+                </div>
+            </div>
+            <div style="厄運之輪">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="厄運之輪" src="http://images.neopets.com/neoboards/avatars/misfortune.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/halloween/wheel/index.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">厄運之輪</a>
+                    </div>
+                </div>
+            </div>
+            <div style="奢華之輪">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="奢華之輪" src="http://images.neopets.com/neoboards/avatars/extravagance.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/desert/extravagance.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">奢華之輪</a>
+                    </div>
+                </div>
+            </div>
+            <div style="尼奧彩票">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="尼奧彩票" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/games/lottery.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">尼奧彩票</a>
+                    </div>
+                </div>
+            </div>
+            <div style="沙漠刮獎卡">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="沙漠刮獎卡" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/desert/sc/kiosk.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">沙漠刮獎卡</a>
+                    </div>
+                </div>
+            </div>
+            <div style="冰洞刮獎卡">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="冰洞刮獎卡" src="http://images.neopets.com/neoboards/avatars/kioskwocky.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/winter/kiosk.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">冰洞刮獎卡</a>
+                    </div>
+                </div>
+            </div>
+            <div style="廢棄刮獎卡">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="廢棄刮獎卡" src="http://images.neopets.com/neoboards/avatars/sssidney.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/halloween/scratch.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">廢棄刮獎卡</a>
+                    </div>
+                </div>
+            </div>
+            <div style="擊落椰果">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="擊落椰果" src="http://images.neopets.com/neoboards/avatars/evilcoconut.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/halloween/coconutshy.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">擊落椰果</a>
+                    </div>
+                </div>
+            </div>
+            <div style="力大無窮">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="力大無窮" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/halloween/strtest/index.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">力大無窮</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <div class="category" style="margin-bottom: 30px;">
+        <h2 onclick="toggleSection(this)" style="background-color: #333; color: #fff; padding: 10px; margin-top: 40px; border-radius: 5px; cursor: pointer;">常用 ▾</h2>
+        <div class="category-content">
+            <div style="海刀劍館">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="海刀訓練" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/pirates/academy.phtml?type=courses" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">海刀訓練</a>
+                    </div>
+                </div>
+            </div>
+            <div style="武術學校">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="武術學校" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/island/training.phtml?type=courses" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">武術學校</a>
+                    </div>
+                </div>
+            </div>
+            <div style="塔拉寶藏">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="塔拉寶藏" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/freebies/tarlastoolbar.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">塔拉寶藏</a>
+						<a href="#" style="font-size: 16px; font-weight: bold; color: #888888; text-decoration: none; margin-bottom: 5px;" target="_blank">13:00-17:45/19:00~23:45</a>
+                    </div>
+                </div>
+            </div>
+            <div style="大雪怪">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="大雪怪" src="http://images.neopets.com/neoboards/avatars/snowager.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/winter/snowager.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">大雪怪</a>
+						<a href="#" style="font-size: 16px; font-weight: bold; color: #888888; text-decoration: none; margin-bottom: 5px;" target="_blank">04:00-05:00/13:00-14:00/21:00-22:00</a>
+                    </div>
+                </div>
+            </div>
+            <div style="致命骰子">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="致命骰子" src="http://images.neopets.com/neoboards/avatars/deadlydice.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="http://www.neopets.com/worlds/deadlydice.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">致命骰子</a>
+						<a href="#" style="font-size: 16px; font-weight: bold; color: #888888; text-decoration: none; margin-bottom: 5px;" target="_blank">15:00-16:00</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+	<div class="category" style="margin-bottom: 30px;">
+        <h2 onclick="toggleSection(this)" style="background-color: #333; color: #fff; padding: 10px; margin-top: 40px; border-radius: 5px; cursor: pointer;">任務 ▾</h2>
+        <div class="category-content">
+            <div style="大腦樹">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="大腦樹" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/halloween/braintree.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">大腦樹</a>
+                    </div>
+                </div>
+            </div>
+            <div style="埃索">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="埃索" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/halloween/esophagor.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">埃索</a>
+                    </div>
+                </div>
+            </div>
+            <div style="居多拉">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="居多拉" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/faerieland/darkfaerie.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">居多拉</a>
+                    </div>
+                </div>
+            </div>
+            <div style="伊魯森">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="伊魯森" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/medieval/earthfaerie.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">伊魯森</a>
+                    </div>
+                </div>
+            </div>
+            <div style="雪精靈">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="雪精靈" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/winter/snowfaerie.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">雪精靈</a>
+                    </div>
+                </div>
+            </div>
+            <div style="女巫塔">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="女巫塔" src="http://images.neopets.com/neoboards/avatars/ednacackle.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/halloween/witchtower.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">女巫塔</a>
+                    </div>
+                </div>
+            </div>
+            <div style="神秘島廚房">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="神秘島廚房" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/island/kitchen.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">神秘島廚房</a>
+                    </div>
+                </div>
+            </div>
+            <div style="巧合號">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="巧合號" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/space/coincidence.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">巧合號</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="category" style="margin-bottom: 30px;">
+        <h2 onclick="toggleSection(this)" style="background-color: #333; color: #fff; padding: 10px; margin-top: 40px; border-radius: 5px; cursor: pointer;">遊戲 ▾</h2>
+        <div class="category-content">
+            <div style="拔河">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="拔河" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/games/game.phtml?game_id=909&amp;size=regular&amp;quality=high&amp;play=true" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">拔河</a>
+                    </div>
+                </div>
+            </div>
+            <div style="數學惡夢">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="數學惡夢" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/games/game.phtml?game_id=885&amp;size=regular&amp;quality=high&amp;play=true" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">數學惡夢</a>
+                    </div>
+                </div>
+            </div>
+            <div style="時空門">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="時空門" src="https://images.neopets.com/neoboards/avatars/fuzzleBOO.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/games/game.phtml?game_id=536" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">時空門</a>
+                    </div>
+                </div>
+            </div>
+            <div style="大牢五子棋">
+                <div class="link-item" style="background-color: #fff; border: 1px solid #ccc; margin: 10px 0; padding: 10px; display: flex; align-items: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><input style="margin-right: 10px;" type="checkbox" />
+                    <img alt="大牢五子棋" src="http://images.neopets.com/neoboards/avatars/mastervex.gif" style="width: 50px; height: 50px; margin-right: 15px; border-radius: 5px;" />
+                    <div class="link-info" style="display: flex; flex-direction: column;">
+                        <a href="https://www.neopets.com/games/cellblock/cellblock.phtml" style="font-size: 16px; font-weight: bold; color: #3366cc; text-decoration: none; margin-bottom: 5px;" target="_blank">大牢五子棋</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const isVisible = content.style.display !== "none";
+            content.style.display = isVisible ? "none" : "block";
+            header.innerHTML = header.innerHTML.replace(isVisible ? "▾" : "▸", isVisible ? "▸" : "▾");
+        }
+
+        function clearCheckboxes() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = false);
+        }
+
+        window.onload = () => {
+            const sections = document.querySelectorAll('.category-content');
+            sections.forEach(section => section.style.display = 'block');
+        };
+    </script>
+</body>
+
+</html>
